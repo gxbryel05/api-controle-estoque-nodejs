@@ -7,15 +7,34 @@ API desenvolvida para gerenciar produtos de um estoque, permitindo criar, listar
 - Express
 - PostgreSQL
 
-## Como rodar
+## Funcionalidades
+- Criar produtos
+- Listar todos os produtos
+- Atualizar produtos existentes
+- Deletar produtos
 
-1. Instalar dependências:
+## Como rodar o projeto
+
+### 1. Clone o repositório
+
+git clone https://github.com/seu-usuario/api-controle-estoque-nodejs.git
+
+### 2. Instale as dependências
+
 npm install
 
-2. Rodar o projeto:
-node src/app.js
+### 3. Configure o banco de dados
 
-Servidor: http://localhost:3001
+Certifique-se de que o PostgreSQL está rodando e crie a tabela:
+
+```sql
+CREATE TABLE produtos (
+  id SERIAL PRIMARY KEY,
+  nome VARCHAR(100),
+  quantidade INTEGER,
+  preco NUMERIC
+);
+
 
 ## Endpoints
 
